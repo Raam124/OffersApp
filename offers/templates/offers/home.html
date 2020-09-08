@@ -56,16 +56,17 @@
         {% for post in posts  %}
 
         <div class="card bg-light mb-3">
-            <img alt="" class="card-img img-fluid geeks" id="geeks" src="{{post.image.url}}" />
+            <img alt="" class="card-img img-fluid geeks" id="geeks" src="{{post.image_url}}" />
+            
             <div class="card-block">
                 <h4 class="card-title">Property Name: &nbsp;{{post.property_name}}</h4>
                 <p class="card-text">Location: &nbsp;{{post.area}}</p>
                 <p class="card-text">Property Type: &nbsp;{{post.category}}</p>
-                <p class="card-text link1">Property Link: &nbsp;<a href="{{post.url}}">{{post.url}}</a></p>
                 <p class="card-text copy"> Image Copyrights:&nbsp; {{post.property_name}} </p>
-                <p class="card-text copy"> Image Copyrights:&nbsp; {{post.contact_number}} </p>
-                <p class="card-text copy"> Image Copyrights:&nbsp; {{post.description}} </p>
+                <p class="card-text link1">View Details: &nbsp;<a href="{% url 'offer_detail' post.slug %}">Visit details</a></p>
+                
 
+                
                 <div class="card-footer">
 
                     <p class="card-text date">Posted:{{post.date_published}}</p>

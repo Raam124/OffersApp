@@ -1,0 +1,51 @@
+{% extends 'offers/base.html' %}
+{% load social_share %}
+
+{% block content %}
+
+
+    <div class="main-container">
+    <div class="wrapper">
+        <div class="product-img">
+            <img src="{{offer_detail.image_url}}">
+        </div>
+
+        <div class="product-info">
+            
+            
+            <div class="product-text">
+                <h1></h1>
+                <h2></h2>
+                <p>
+                    
+                    Property Name - {{offer_detail.property_name}}<br>
+                    area -  {{offer_detail.area}}<br>
+                    {% post_to_facebook offer_detail.slug "Post to Facebook!" %} <br>
+                   {% post_to_whatsapp offer_detail.slug "Share via WhatsApp" %}
+                   {% post_to_telegram "Psot to telegram" offer_detail.slug %}
+                    Category -  {{offer_detail.category}}<br>
+                    Property Link- - <a href="{{offer_detail.url}}">{{offer_detail.url}}</a><br>
+                    Description - {{offer_detail.description}} <br>
+                </p>
+                
+            </div>
+            <div class="product-price-btn">
+                <p>Rs.<span></span></p>
+                <button type="button" class="share-button">
+                    <span style="font-size: 16px; line-height: 30px;">Contact No:</span>
+                    <p>{{offer_detail.contact_number}}</p>
+                </button>
+            </div>
+            <div class="date-section">
+                <h6>date Published -{{offer_detail.date_published}} </h6>
+                <h6>date Expires -{{offer_detail.date_expired}} </h6>
+            </div>
+            
+        </div>
+        
+    </div>
+</div>
+
+
+{% endblock content %}
+

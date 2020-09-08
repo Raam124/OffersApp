@@ -23,9 +23,10 @@ class OffersAd(models.Model):
     property_name = models.CharField(max_length=200, null=True)
     area = models.CharField(max_length=100, null=True)
     url = models.TextField(validators=[URLValidator()])
+    image_url = models.URLField(max_length=1000, null=True)
     category = models.CharField(max_length=100, null=True,choices=catergory_choices)
     description = models.CharField(max_length=1000, null=True)
-    image = models.ImageField(upload_to=upload_location, null=True)
+    # image = models.ImageField(upload_to=upload_location, null=True)
     contact_number = models.CharField(null=True, max_length=15)
     date_published = models.DateField(
         auto_now_add=True, verbose_name="date published")

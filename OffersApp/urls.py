@@ -18,13 +18,13 @@ from django.urls import path,include
 from django.conf.urls.static import static
 from django.conf import settings
 
-from offers.views import homepage,slider
+from offers.views import homepage,offer_detail
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     # path("offers/", include("offers.urls")),
     path("", homepage, name="home"),
-    path("slider/", slider, name="slider"),
+    path("<slug>/detail",offer_detail, name = "offer_detail")
 ]
 
 
