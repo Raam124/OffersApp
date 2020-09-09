@@ -1,3 +1,12 @@
+:root {
+	--bg-color: #f1f1f1;
+	--card-color: #f8f8f8;
+	--card-footer-color: #c3c4c3;
+	--search-bar-color: #cbcdce;
+	--dark-letter-color:#242423;
+	--menu-bar-color: #19323c;
+}
+
 html {
 	overflow-x: hidden;
 }
@@ -11,8 +20,13 @@ html {
 
 body {
 	width: 100%;
-	background-color: #f8e0b3;
+	background-color: var(--bg-color);
 	overflow-x: inherit;
+}
+
+nav {
+	background-color: #19323c;
+	color: #f3f7f0;
 }
 
 .card-img-top {
@@ -26,7 +40,7 @@ body {
 	margin-top: 25px;
 }
 
-input:focus, textarea:focus, select:focus{
+input:focus, textarea:focus, select:focus {
 	outline: none;
 }
 
@@ -40,6 +54,12 @@ input:focus, textarea:focus, select:focus{
 	float: left;
 	border: 1rem;
 	border-radius: 35px;
+	background-color: var(--search-bar-color);
+	color: var(--dark-letter-color);
+}
+
+.search::placeholder{
+	color: var(--dark-letter-color);
 }
 
 input.btn {
@@ -59,7 +79,7 @@ input.btn:hover, input.btn:active {
 	box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
 }
 
-#id_category {
+#id_category , option{
 	height: auto;
 	font-family: 'Lucida Sans', serif;
 	font-size: 15px;
@@ -98,6 +118,7 @@ label {
 	.myform {
 		float: unset;
 		width: 100%;
+		margin: auto;
 		align-content: center;
 		justify-content: center;
 		text-align: center;
@@ -157,7 +178,7 @@ input[type=checkbox]:checked~label>img {
 
 .container-fluid {
 	font-family: Arial, Helvetica, sans-serif;
-	background-color: #f1d072a9;
+	background-color: var(--bg-color);
 }
 
 #myImg {
