@@ -1,10 +1,12 @@
 {% extends 'offers/base.html' %}
+{% load static %}
 
 
 {% block content %}
 
-<nav class="navbar navbar-expand-lg" style="background-color: #19323c; color: #f3f7f0;">
-  <a class="navbar-brand" href="#">SLOffers.lk</a>
+<nav class="navbar navbar-expand-lg">
+  <!-- <a class="navbar-brand" href="#">SLOffers.lk</a> -->
+  <img src={% static 'image/logo.png' %} alt="" style="width: 5%; height: 5%; float: left; margin-left: 10px;">
 </nav>
 
 {% endblock content %}
