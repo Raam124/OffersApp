@@ -2,10 +2,16 @@
 
 <html>
     <head>
+
+        {% block styles %}
+        
+        {% endblock %}
         <link rel="stylesheet" href={% static 'css/home.css' %}>
         <link rel="stylesheet" href={% static 'css/footer.css' %}>
         <link rel="stylesheet" href={% static 'css/slider.css' %}>
         <link rel="stylesheet" href={% static 'css/offer_detail.css' %}>
+        <link rel="stylesheet" href={% static 'css/aboutus.css' %}>
+        
         <link href='https://fonts.googleapis.com/css?family=Be Vietnam' rel='stylesheet'>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -20,6 +26,7 @@
         
     </head>
     <body>
+
     
         {% block content %}
         {% endblock content %}

@@ -2,11 +2,18 @@
 {% load static %}
 
 
+
+
 {% block content %}
 
-<nav class="navbar navbar-expand-lg">
+
+
+<nav class="navbar navbar-expand-lg p-0" style="height: 10%; ">
   <!-- <a class="navbar-brand" href="#">SLOffers.lk</a> -->
-  <img src={% static 'image/logo.png' %} alt="" style="width: 5%; height: 5%; float: left; margin-left: 10px;">
+  <a class="navbar-brand " href=" {% url 'home' %} "><img src={% static 'image/cover.png' %} alt="" style="width: 100%;" class="logo"></a>
+  <a href=" {% url 'aboutus' %} " style="margin-right: 5%; color:white;">About Us</a>
+
+  
 </nav>
 
 {% endblock content %}

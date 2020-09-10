@@ -1,10 +1,10 @@
 :root {
-	--bg-color: #f1f1f1;
-	--card-color: #f8f8f8;
+	--bg-color: white;
+	--card-color: white;
 	--card-footer-color: #c3c4c3;
 	--search-bar-color: #cbcdce;
 	--dark-letter-color:#242423;
-	--menu-bar-color: #19323c;
+	--menu-bar-color: #212529;
 }
 
 html {
@@ -25,9 +25,10 @@ body {
 }
 
 nav {
-	background-color: #19323c;
+	background-color: var(--menu-bar-color);
 	color: #f3f7f0;
 }
+
 
 .card-img-top {
 	width: 100%;
@@ -100,6 +101,20 @@ label {
 	width: 40%;
 }
 
+img.logo {
+	float: left;
+	width: 25%;
+	margin: unset; 
+}
+
+.navbar-brand{
+	width: 10%;
+}
+
+a, a:hover {
+	text-decoration: none !important;
+}
+
 @media only screen and (max-width:900px) {
 	.top-section {
 		margin-right: unset;
@@ -122,6 +137,16 @@ label {
 		align-content: center;
 		justify-content: center;
 		text-align: center;
+	}
+
+	img.logo{
+		width: 100%;
+		max-height: 10rem;
+		float: unset;
+	}
+
+	.navbar-brand {
+		width: 60%;
 	}
 }
 
@@ -343,3 +368,8 @@ p {
 .copy {
 	text-align: center;
 }
+
+
+
+  
+  

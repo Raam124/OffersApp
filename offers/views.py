@@ -28,3 +28,7 @@ def offer_detail(request, slug):
     offer_detail = get_object_or_404(OffersAd, slug=slug)
     context['offer_detail'] = offer_detail
     return render(request, 'offers/offer_detail.html', context)
+
+
+def aboutus(request):
+    return render(request,'offers/aboutus.html')

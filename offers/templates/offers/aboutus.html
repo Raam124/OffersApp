@@ -1,0 +1,65 @@
+{% extends 'offers/base.html' %}
+{% load static %}
+
+{% block styles %}
+{{ block.super }}
+<link rel="stylesheet" href={% static 'css/aboutus.css' %}>
+{% endblock %}
+
+
+{% block content %}
+{% include 'offers/navbar.html' %}
+<div class=" ">
+
+    <!-- Copy the content below until next comment -->
+    <div class="card card-custom bg-white border-white border-0">
+        <div class="card-custom-img"
+            style="background-image: url(https://images.hdqwalls.com/wallpapers/minimalistic-abstract-colors-simple-background-5k-fc.jpg);">
+        </div>
+        <div class="card-custom-avatar">
+            <img class="img-fluid"
+                src="https://i.imgur.com/8L64vbh.png" 
+                alt="Avatar" />
+        </div>
+        <div class="card-body" style="overflow-y: auto; font-size: 2em;">
+            <h4 class="card-title">Email Us Your Offers</h4>
+            <p class="card-text" style="font-size: 0.5em;">If you want to publish your offers here in SLOffers.lk please email Us the offer details to below email with right subject. 
+                <br>
+                 <span style="color: red;">sloffers.lk@gmail.com </span>
+            </p>
+            <p></p>
+            
+        </div>
+        <!-- <div class="card-footer" style="background: inherit; border-color: inherit;">
+            <a href="#" class="btn btn-primary">Option</a>
+            <a href="#" class="btn btn-outline-primary">Other option</a>
+        </div> -->
+    </div>
+    <!-- Copy until here -->
+
+    <div class="card card-custom bg-white border-white border-0">
+        <div class="card-custom-img"
+            style="background-image: url(https://images.hdqwalls.com/wallpapers/minimalistic-abstract-colors-simple-background-5k-fc.jpg);">
+        </div>
+        <div class="card-custom-avatar">
+            <img class="img-fluid"
+                src="https://i.imgur.com/syWLZO8.png" 
+                alt="Avatar" />
+        </div>
+        <div class="card-body" style="overflow-y: auto">
+            <h4 class="card-title">WhatsApp Us Your Offers</h4>
+            <p class="card-text" style="font-size: 1em;">If you want to publish your offers here in SLOffers.lk please WhatsApp Us the offer details to below number with right subject. 
+                <br>
+                 <span style="color: red;"> +94 000000000 </span>
+            </p>
+            <p></p>
+        </div>
+        <!-- <div class="card-footer" style="background: inherit; border-color: inherit;">
+            <a href="#" class="btn btn-primary">Option</a>
+            <a href="#" class="btn btn-outline-primary">Other option</a>
+        </div> -->
+    </div>
+
+</div>
+
+{% endblock content %}
