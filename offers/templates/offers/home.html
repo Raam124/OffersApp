@@ -28,9 +28,9 @@
     <div class="row">
         {% include 'offers/imageslide.html' %}
     </div>
-
+<!-- 
     <div class="row">
-        <div class="col-md-6 col-sm-12 mx-5 px-3 top-section">
+        <div class="col-md-6 mx-5 px-3 top-section">
             <input type="text" id="myFilter" class="search" onkeyup="myFunction()"
                 placeholder="Search By Location Here..">
             <form method="get" class="myform">
@@ -38,8 +38,22 @@
                 <input type="submit" class="btn btn-sm" value="go" />
             </form>
         </div>
+    </div> -->
+
+    <div style ="display:flex; justify-content:center;">
+
+        <input type="text" id="myFilter" class="search" onkeyup="myFunction()"
+                placeholder="Search By Location Here..">
     </div>
 
+    <div style ="display:flex; justify-content:center;">
+
+        <form method="get" class="myform" style="text-align: center;">
+            {{ myfilter.form}}
+            <input type="submit" class="btn btn-sm" value="go" />
+        </form>
+    </div>
+    
     <div class="card-columns " id="myItems">
         {% for post in posts  %}
 
