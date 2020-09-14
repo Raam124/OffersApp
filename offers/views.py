@@ -5,13 +5,13 @@ from offers.filters import OffersFilter
 
 
 def homepage(request):
-    posts = OffersAd.objects.all()
+    posts = OffersAd.objects.all().order_by("-date_published")
 
     myfilter = OffersFilter(request.GET, queryset=posts)
     posts = myfilter.qs
     
-    
-    paginator = Paginator(posts,10)
+   
+    paginator = Paginator(posts,5)
     page = request.GET.get('page')
     posts = paginator.get_page(page)
     

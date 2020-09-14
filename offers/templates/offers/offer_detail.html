@@ -9,7 +9,12 @@
         <div class="product-img">
             <img id="geeks" src="{{offer_detail.image_url}}">
         </div>
-        <a href="{% url 'home' %}"><i class="fa fa-arrow-left"></i></a>
+
+        <script>
+            document.write('<a href="' + document.referrer + '"><i class="fa fa-arrow-left"></i></a>');
+        </script>
+
+      
         <div class="product-info">
             <div class="product-text">
                 <h1>Property Name - {{offer_detail.property_name}}</h1>
@@ -27,7 +32,8 @@
                 </p>
 
                 <p class="detail" style="text-align: justify;">
-                    Description - {{offer_detail.description}} <br>
+                    Description - {% autoescape off %}{{offer_detail.description}}{% endautoescape %} <br>
+                    
                 </p>
                 <hr>
 
@@ -50,6 +56,6 @@
     </div>
 </div>
 
-
+{% include 'offers/footer.html' %}
 
 {% endblock content %}

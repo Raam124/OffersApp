@@ -25,14 +25,16 @@ class OffersAd(models.Model):
     url = models.TextField(validators=[URLValidator()])
     image_url = models.URLField(max_length=1000, null=True)
     category = models.CharField(max_length=100, null=True,choices=catergory_choices)
-    description = models.CharField(max_length=1000, null=True)
+    description = models.TextField(max_length=10000, null=True)
     # image = models.ImageField(upload_to=upload_location, null=True)
-    contact_number = models.CharField(null=True, max_length=15)
+    contact_number = models.CharField(null=True, max_length=30)
     date_published = models.DateField(
         auto_now_add=True, verbose_name="date published")
     date_expired = models.DateField(
          verbose_name="date Expired")
     slug = models.SlugField(blank=True, unique=True)
+
+
     def __str__(self):
         return f"{self.property_name}-{self.area}-{self.date_published}"
 
@@ -43,6 +45,6 @@ class OffersAd(models.Model):
 
 def pre_save_ad_post_receiver(sender, instance, *args, **kwargs):
 	if not instance.slug:
-		instance.slug = slugify(instance.property_name + "-" + instance.area)
+		instance.slug = slugify(instance.property_name + "-" + instance.area + "-" + instance.id)
 
 pre_save.connect(pre_save_ad_post_receiver, sender=OffersAd)

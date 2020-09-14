@@ -48,10 +48,14 @@
 
     <div style ="display:flex; justify-content:center;">
 
-        <form method="get" class="myform" style="text-align: center;">
-            {{ myfilter.form}}
-            <input type="submit" class="btn btn-sm" value="go" />
-        </form>
+
+            <ul id="id_categories">
+                <li><a href="?category=">All</a></li>
+                <li><a href="?category=activities">Activities</a></li>
+                <li><a href="?category=hotel">Hotels</a></li>
+            </ul>
+
+            
     </div>
     
     <div class="card-columns " id="myItems">
