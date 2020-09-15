@@ -3,11 +3,13 @@
 	--card-color: white;
 	--card-footer-color: #c3c4c3;
 	--search-bar-color: #cbcdce;
-	--dark-letter-color:#242423;
+	--dark-letter-color: #242423;
 	--menu-bar-color: #212529;
 }
-/* 
-html {
+
+
+/* html {
+	width: 100%;
 	overflow-x: hidden;
 } */
 
@@ -21,14 +23,12 @@ html {
 body {
 	width: 100%;
 	background-color: var(--bg-color);
-	
 }
 
 nav {
 	background-color: var(--menu-bar-color);
 	color: #f3f7f0;
 }
-
 
 .card-img-top {
 	width: 100%;
@@ -59,7 +59,7 @@ input:focus, textarea:focus, select:focus {
 	color: var(--dark-letter-color);
 }
 
-.search::placeholder{
+.search::placeholder {
 	color: var(--dark-letter-color);
 }
 
@@ -80,7 +80,7 @@ input.btn:hover, input.btn:active {
 	box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
 }
 
-#id_category , option{
+#id_category, option {
 	height: auto;
 	font-family: 'Lucida Sans', serif;
 	font-size: 15px;
@@ -104,10 +104,10 @@ label {
 img.logo {
 	float: left;
 	width: 25%;
-	margin: unset; 
+	margin: unset;
 }
 
-.navbar-brand{
+.navbar-brand {
 	width: 10%;
 }
 
@@ -125,27 +125,23 @@ a, a:hover {
 		justify-content: center;
 	}
 	.search {
-		
 		width: 80%;
 		margin: auto !important;
 		margin-bottom: 2%;
 		float: none;
 	}
 	.myform {
-		
 		width: 100%;
 		margin: auto !important;
 		align-content: center;
 		justify-content: center;
 		text-align: center;
 	}
-
-	img.logo{
+	img.logo {
 		width: 100%;
 		max-height: 10rem;
 		float: unset;
 	}
-
 	.navbar-brand {
 		width: 60%;
 	}
@@ -371,7 +367,44 @@ p {
 	text-align: center;
 }
 
+#v_btn {
+	background: #222;
+	height: 20px;
+	width: 120px;
+	border: none;
+	border-radius: 10px;
+	color: #eee;
+	font-size: 15px;
+	font-family: 'Vietnam';
+	text-align: center;
+	position: relative;
+	transition: 1s;
+	-webkit-tap-highlight-color: transparent;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	padding: 5px;
+	margin: 5px auto;
+}
 
+#v_btn #circle {
+	width: 5px;
+	height: 5px;
+	background: transparent;
+	border-radius: 50%;
+	position: absolute;
+	top: 0;
+	left: 50%;
+	overflow: hidden;
+	transition: 500ms;
+}
 
-  
-  
+.noselect {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}

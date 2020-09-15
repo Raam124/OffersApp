@@ -92,21 +92,23 @@ img {
 
 @media only screen and (max-width: 900px) {
     .mySlides {
-        width: 95%;
-        height: 300px;
+        width: 93%;
+        height: 200px;
+        margin: auto;
+        
     }
 
     .mySlides img {
         
-        max-height: 300px;
-        min-height: 300px;
+        max-height: 200px;
+        min-height: 200px;
         
     }
 
     .slideshow-container {
         
-        max-height: 300px;
-        min-height: 300px;
+        max-height: 200px;
+        min-height: 200px;
         
     }
 }

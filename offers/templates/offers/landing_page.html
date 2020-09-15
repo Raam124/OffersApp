@@ -1,0 +1,68 @@
+{% extends 'offers/base.html' %}
+{% load static %}
+
+{% block styles %}
+{{ block.super }}
+<link rel="stylesheet" href={% static 'css/landing_page.css' %}>
+{% endblock %}
+
+{% block content %}
+{% include 'offers/navbar.html' %}
+
+
+
+<div class="container-fluid p-0 m-0">
+
+    <div class="row">
+        {% include 'offers/imageslide.html' %}
+    </div>
+
+    <div class="cards-list">
+        <a href="home/?category=">
+            <div class="card_">
+                <div class="card_image"> <img src="https://i.imgur.com/WaQJyyS.png"/> </div>
+            </div>
+        </a>
+
+        <a href="home/?category=hotel">
+            <div class="card_">
+                <div class="card_image"> <img src="https://i.imgur.com/VccefvQ.png"/> </div>
+            </div>
+        </a>
+
+        <a href="home/?category=food">
+            <div class="card_">
+                <div class="card_image"> <img src={% static 'image/food.png' %} /> </div>
+            </div>
+        </a>
+
+        <a href="home/?category=activities">
+            <div class="card_">
+                <div class="card_image"> <img src="https://i.imgur.com/TxF6y44.png"/> </div>
+            </div>
+        </a>
+
+        <a href="home/?category=items">
+            <div class="card_">
+                <div class="card_image"> <img src={% static 'image/Products.png' %} /> </div>
+            </div>
+        </a>
+
+        <a href="home/?category=other">
+            <div class="card_">
+                <div class="card_image"> <img src={% static 'image/others.png' %} /> </div>
+            </div>
+        </a>
+        
+    </div>
+
+
+
+
+
+</div>
+
+
+{% include 'offers/footer.html' %}
+
+{% endblock content %}

@@ -118,7 +118,7 @@ a .fa:hover {
 
 .product-text p {
     font-family: 'Playfair Display', serif;
-    color: #8d8d8d;
+    color: #585757;
     line-height: 1.7em;
     font-size: 15px;
     font-weight: lighter;
@@ -183,11 +183,15 @@ a .fa:hover {
     color: var(--dark-letter-color);
 }
 
-.facebook-this a,
-.whatsapp-this a,
-.telegram-this a {
+.facebook-this a {
     text-decoration: none;
-    color: #8d8d8d;
+    color:rgb(14, 27, 128);
+}
+
+
+.whatsapp-this a {
+    text-decoration: none;
+    color:rgb(18, 97, 14);
 }
 
 .facebook-this,
