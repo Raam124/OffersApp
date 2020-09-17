@@ -26,7 +26,8 @@ urlpatterns = [
     path("home/", homepage, name="home"),
     path("", landing_page, name = "landing_page"),
     path("aboutus/", aboutus, name="aboutus"),
-    path("<slug>/detail",offer_detail, name = "offer_detail")
+    path("<slug>/detail",offer_detail, name = "offer_detail"),
+    path('djga/', include('google_analytics.urls')),
 ]
 
 

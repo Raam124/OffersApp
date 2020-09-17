@@ -27,7 +27,10 @@
     </head>
     <body>
 
-    
+        {% load google_analytics_tags %}
+<div style="display:none">
+    <img src="{% google_analytics %}" width="0" height="0" />
+</div>
         {% block content %}
         {% endblock content %}
         <script src="{% static 'js/home.js' %}"></script>

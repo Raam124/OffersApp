@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django_filters',
     'django_social_share',
+    'google_analytics',
 
     #myapps 
 
@@ -134,3 +135,8 @@ STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static_cdn')
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media_cdn')
+
+
+GOOGLE_ANALYTICS = {
+    'google_analytics_id': 'UA-000000-2',
+}
