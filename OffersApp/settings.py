@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django_filters',
     'django_social_share',
     'google_analytics',
+    'rest_framework',
 
     #myapps 
 
@@ -139,4 +140,14 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media_cdn')
 
 GOOGLE_ANALYTICS = {
     'google_analytics_id': 'UA-000000-2',
+}
+
+
+REST_FRAMEWORK = {
+    'DEFAULT_RENDERER_CLASSES': [
+        'rest_framework.renderers.JSONRenderer',
+        'rest_framework.renderers.BrowsableAPIRenderer',
+    ],
+
+ 
 }

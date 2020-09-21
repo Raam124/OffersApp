@@ -18,7 +18,9 @@ from django.urls import path,include
 from django.conf.urls.static import static
 from django.conf import settings
 
-from offers.views import homepage,offer_detail,aboutus,landing_page
+from django.conf.urls import url
+
+from offers.views import homepage,offer_detail,aboutus,landing_page,offers_list
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -28,6 +30,10 @@ urlpatterns = [
     path("aboutus/", aboutus, name="aboutus"),
     path("<slug>/detail",offer_detail, name = "offer_detail"),
     path('djga/', include('google_analytics.urls')),
+
+    path('offers/',offers_list, name= "offers_list"),
+
+    url(r'^api-auth/', include('rest_framework.urls'))
 ]
 
 

@@ -4,6 +4,19 @@ from django.core.paginator import Paginator
 from offers.filters import OffersFilter
 
 
+from django.http import HttpResponse, JsonResponse
+from django.views.decorators.csrf import csrf_exempt
+from rest_framework.parsers import JSONParser
+from rest_framework.renderers import JSONRenderer
+from offers.serializers import OffersSerializer
+from rest_framework.decorators import api_view,renderer_classes
+from rest_framework.response import Response
+from rest_framework import viewsets
+
+
+
+
+
 def homepage(request):
     posts = OffersAd.objects.all().order_by("-date_published")
 
@@ -36,3 +49,13 @@ def aboutus(request):
 
 def landing_page(request):
     return render(request,'offers/landing_page.html')
+
+
+
+@api_view(['GET'])
+def offers_list(request):
+        snippets = OffersAd.objects.all()
+        serializer = OffersSerializer(snippets, many=True)
+        return Response(serializer.data)
+
+
