@@ -25,10 +25,10 @@
 
 <div class="container-fluid p-0 m-0">
 
-    <div class="row">
-        {% comment %} {% include 'offers/imageslide.html' %} {% endcomment %}
+    {% comment %} <div class="row">
+        {% include 'offers/imageslide.html' %}
         {% include 'offers/banner.html' %}
-    </div>
+    </div> {% endcomment %}
     <!-- 
     <div class="row">
         <div class="col-md-6 mx-5 px-3 top-section">
@@ -43,16 +43,18 @@
 
     <div style="display:flex; justify-content:center;">
 
-        <input type="text" id="myFilter" class="search" onkeyup="myFunction()" placeholder="Search By Location Here..">
+        {% include 'offers/banner.html' %}
+
+
+
     </div>
 
     <div style="display:flex; justify-content:center;">
 
-
-
-
-
+        <input type="text" id="myFilter" class="search" onkeyup="myFunction()" placeholder="Search By Location Here..">
     </div>
+
+    
 
     <div class="mypaginator">
         <ul class="pagination m-0 px-3 py-1">
