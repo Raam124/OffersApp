@@ -24,7 +24,7 @@ def homepage(request):
     posts = myfilter.qs
     
    
-    paginator = Paginator(posts,5)
+    paginator = Paginator(posts,21)
     page = request.GET.get('page')
     posts = paginator.get_page(page)
     

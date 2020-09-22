@@ -29,11 +29,11 @@ urlpatterns = [
     path("", landing_page, name = "landing_page"),
     path("aboutus/", aboutus, name="aboutus"),
     path("<slug>/detail",offer_detail, name = "offer_detail"),
-    path('djga/', include('google_analytics.urls')),
+    # path('djga/', include('google_analytics.urls')),
 
     path('offers/',offers_list, name= "offers_list"),
 
-    url(r'^api-auth/', include('rest_framework.urls'))
+    # url(r'^api-auth/', include('rest_framework.urls'))
 ]
 
 
