@@ -8,6 +8,7 @@
     /* flex-wrap: wrap; */
     margin: auto;
     max-width: 60%;
+    position: relative;
 }
 
 .banner_{
