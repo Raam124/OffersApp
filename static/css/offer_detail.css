@@ -60,6 +60,10 @@ a .fa:hover {
     border-radius: 50%;
 }
 
+.fa{
+    padding: 0 10px 0 0;
+}
+
 .product-img {
     float: left;
     height: 100%;
@@ -117,15 +121,54 @@ a .fa:hover {
 }
 
 .product-text p {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Roboto', sans-serif;
     color: #585757;
-    line-height: 1.7em;
+    /* line-height: 1.7em; */
     font-size: 15px;
     font-weight: lighter;
 }
 
-.detail {
+table{
+    font-family: 'Roboto', sans-serif;
+    color: #585757;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    font-size: 15px;
+    margin-right: 0 !important;
+}
+
+
+.t-title{
+    text-align: left;
+    text-transform: capitalize;
+    font-weight: bold;
+    padding: 3px 0 6px 0;
+    margin-right: 15px;
+    width: 40%;
+    vertical-align: middle;
+}
+
+.t-info{
+    text-align: left;
+    padding: 3px 0 6px 0;
+    font-weight: lighter;
+    width: 60%;
+}
+
+.detail , p.detail-d{
     margin: 0 28px;
+}
+
+p.detail-d{
+    text-align: justify;
+    max-height: 50%;
+    overflow-y: scroll;
+}
+
+p.detail-d::-webkit-scrollbar {
+    width: 0px;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
 }
 
 .product-price-btn {
@@ -224,6 +267,10 @@ a .fa:hover {
         margin: auto;
         padding: unset;
     }
+
+    table{
+        width: 100%;
+    }
 }
 
 @media screen and (max-width: 800px) {
@@ -273,6 +320,12 @@ a .fa:hover {
         margin: auto;
         padding: 0;
         position: unset;
+    }
+
+    p.detail-d{
+        text-align: justify;
+        max-height: none;
+        overflow-y: unset;
     }
 }
 
