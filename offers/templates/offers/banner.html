@@ -1,18 +1,25 @@
+{% load static %}
+
+{% block styles %}
+
+<link rel="stylesheet" href={% static 'css/banner.css' %}>
+{% endblock %}
+
 <div class="banner-card">
     <div class="banner_">
-        <h1>Find a best offer fits your badget.</h1>
-        <h5>sub tag line</h5>
+        <h1>Find a best offer that fits your budget.</h1>
+        <h5>Don't miss</h5>
     </div>
     <div class="row">
-        <div class="badge_">
-            <p>facebook</p>
+
+        <div id="social-platforms">
+
+            <a class="btn btn-icon btn-facebook" href="#" style="width: 160px;"><i class="fa fa-facebook"></i><span>Facebook</span></a>
+            <a class="btn btn-icon btn-twitter" href="#" style="width: 160px;"><i class="fa fa-instagram"></i><span>Instagram</span></a>
+            <a class="btn btn-icon btn-googleplus" href="#" style="width: 160px;"><i class="fa fa-whatsapp"></i><span>WhatsApp</span></a>
         </div>
-        <div class="badge_">
-           <p>whatsapp</p>
-        </div>
-        <div class="badge_">
-            <p>instagram</p>
-        </div>
+
+
     </div>
-    
+
 </div>

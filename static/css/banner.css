@@ -29,14 +29,21 @@
     margin: 0;
 }
 
-.badge_{
-    margin: 15px auto;
-    height: 80px;
-    width: 250px;
-    background-color:var(--menu-bar-color);
-    color: white;
-    border-radius: 8px;
-    padding: 2%;
+.fa-facebook{
+    color: #3b5998 !important;
+    opacity: unset !important;
+}
+
+.fa-instagram{
+    opacity: unset !important;
+    color: #c13584 !important;
+
+}
+
+.fa-whatsapp{
+    opacity: unset !important;
+    color: #128c7e !important;
+
 }
 
 @media all and (max-width: 1200px) {
@@ -56,4 +63,11 @@
     .row{
         flex-direction: column;
     }
+
+    a.btn.btn-icon{
+        display: block;
+    }
   }
+
+
+

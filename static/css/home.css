@@ -170,6 +170,15 @@ img {
 .card {
 	margin: 5%;
 	box-shadow: 0 0 15px rgba(10, 10, 10, 0.3);
+	border-radius: 1rem !important;
+}
+
+.card-block{
+	border-radius: 0 0 1rem 1rem !important;
+}
+
+.card-img{
+	border-radius: 1rem 1rem 0 0 !important;
 }
 
 .col {
@@ -347,14 +356,14 @@ ul {
 
 .card-title {
 	text-align: center;
-	font-family: 'Vietnam';
+	font-family: 'Roboto ', sans-serif;
 	font-size: 20px;
 	line-height: inherit;
 	margin-bottom: 0;
 }
 
 .card-text {
-	font-family: 'Baumans';
+	font-family: 'Mukta', sans-serif;
 	font-size: 14px;
 	text-align: center;
 	margin-bottom: 0;
@@ -389,7 +398,7 @@ p {
 	border-radius: 10px;
 	color: #eee;
 	font-size: 15px;
-	font-family: 'Vietnam';
+	font-family: 'Roboto ', sans-serif;
 	text-align: center;
 	position: relative;
 	transition: 1s;
@@ -399,7 +408,7 @@ p {
 	justify-content: center;
 	cursor: pointer;
 	padding: 5px;
-	margin: 5px auto;
+	margin: 15px auto;
 }
 
 #v_btn #circle {
