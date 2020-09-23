@@ -2,15 +2,17 @@
 
 /* Slideshow container */
 
-.slideshow-container {
+.slideshow-container_ {
     /* max-width: 1000px; */
     position: relative;
-    margin: auto;
+    margin:  4rem auto;
     text-align: center;
     transition: all 0.6s ease;
 }
 
-
+span{
+    color: black;
+}
 
 @media only screen and (max-width: 900px) {
    
@@ -53,9 +55,12 @@ h1{
 
 
 @media all and (max-width: 900px) {
-   
-    a.btn.btn-icon{
-        display: block;
-    }
+   span{
+      display: none;
+   }
+
+   .social-icon_{
+       width: 100 !important;
+   }
   }
 
