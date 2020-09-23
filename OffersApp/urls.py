@@ -20,14 +20,15 @@ from django.conf import settings
 
 from django.conf.urls import url
 
-from offers.views import homepage,offer_detail,aboutus,landing_page,offers_list
+from offers.views import homepage,offer_detail,aboutus,landing_page,offers_list,about_us
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     # path("offers/", include("offers.urls")),
     path("home/", homepage, name="home"),
     path("", landing_page, name = "landing_page"),
-    path("aboutus/", aboutus, name="aboutus"),
+    path("contact-us/", aboutus, name="aboutus"),
+    path("about-us/", about_us, name="about-us"),
     path("<slug>/detail",offer_detail, name = "offer_detail"),
     # path('djga/', include('google_analytics.urls')),
 

@@ -1,0 +1,45 @@
+{% extends 'offers/base.html' %}
+{% load static %}
+
+{% block styles %}
+{{ block.super }}
+<link rel="stylesheet" href={% static 'css/aboutus.css' %}>
+{% endblock %}
+
+
+{% block content %}
+{% include 'offers/navbar.html' %}
+<div class=" ">
+
+    <!-- Copy the content below until next comment -->
+    <div class="card card-custom bg-white border-white border-0">
+        <div class="card-custom-img"
+            style="background-image: url(https://images.hdqwalls.com/wallpapers/minimalistic-abstract-colors-simple-background-5k-fc.jpg);">
+        </div>
+        <div class="card-custom-avatar">
+            <img class="img-fluid"
+                src="https://i.imgur.com/8L64vbh.png" 
+                alt="Avatar" />
+        </div>
+        <div class="card-body" style="overflow-y: auto; font-size: 2em;">
+            <h4 class="card-title">About Us</h4>
+            <p class="card-text" style="font-size: 0.5em; text-align: left;">
+            SLOffers is a quick web that provides the Offers that available around Sri Lanka. 
+            This site includes various categories of offers and presented it in a much simpler form to keep it simple at the same time make it visually appealing. 
+            All the Images here are subjected to copyright to the respected Property Owners and we clearlry mentioned the property owner in each offers. 
+            If you have and issues or complaints regarding the offers posted here please don't hesitate to contact US.
+                <br>
+            </p>
+            <p></p>
+            
+        </div>
+        <!-- <div class="card-footer" style="background: inherit; border-color: inherit;">
+            <a href="#" class="btn btn-primary">Option</a>
+            <a href="#" class="btn btn-outline-primary">Other option</a>
+        </div> -->
+    </div>
+    <!-- Copy until here -->
+
+</div>
+
+{% endblock content %}

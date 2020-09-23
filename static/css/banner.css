@@ -10,7 +10,7 @@
     transition: all 0.6s ease;
 }
 
-span{
+a.social-icon_{
     color: black;
 }
 
@@ -55,12 +55,13 @@ h1{
 
 
 @media all and (max-width: 900px) {
-   span{
+   span.tag_{
       display: none;
    }
 
    .social-icon_{
        width: 100 !important;
+       text-align: center !important;
    }
   }
 

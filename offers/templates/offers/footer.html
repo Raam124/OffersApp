@@ -1,17 +1,26 @@
-  {% extends 'offers/base.html' %}
-    
+{% extends 'offers/base.html' %}
+{% load static %}
+{% block styles %}
+
+<link rel="stylesheet" href={% static 'css/banner.css' %}>
+{% endblock %}
 
 {% block content %}
 
 <footer class="site-footer">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-12 col-md-6">
-            <h6>About</h6>
-            <p class="text-justify"><p>SLOffers is a quick web that provides the Offers that available around Sri Lanka. This site includes various categories of offers and presented it in a much simpler form to keep it simple at the same time make it visually appealing. All the Images here are subjected to copyright to the respected Property Owners and we clearlry mentioned the property owner in each offers. If you have and issues or complaints regarding the offers posted here please don't hesitate to contact US.</p>
-          </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-md-6">
+        <h6>About</h6>
+        <p class="text-justify">
+        <p>SLOffers is a quick web that provides the Offers that available around Sri Lanka. This site includes various
+          categories of offers and presented it in a much simpler form to keep it simple at the same time make it
+          visually appealing. All the Images here are subjected to copyright to the respected Property Owners and we
+          clearlry mentioned the property owner in each offers. If you have and issues or complaints regarding the
+          offers posted here please don't hesitate to contact US.</p>
+      </div>
 
-          {% comment %} <div class="col-xs-6 col-md-3">
+      <!-- <div class="col-xs-6 col-md-3">
             <h6>Categories</h6>
             <ul class="footer-links">
               <li><a href="http://scanfcode.com/category/c-language/">C</a></li>
@@ -21,45 +30,49 @@
               <li><a href="http://scanfcode.com/category/android/">Android</a></li>
               <li><a href="http://scanfcode.com/category/templates/">Templates</a></li>
             </ul>
-          </div> {% endcomment %}
+          </div>  -->
 
-          {% comment %} <div class="col-xs-6 col-md-3">
-            <h6>Quick Links</h6>
-            <ul class="footer-links">
-              <li><a href="http://scanfcode.com/about/">About Us</a></li>
-              <li><a href="http://scanfcode.com/contact/">Contact Us</a></li>
-              <li><a href="http://scanfcode.com/contribute-at-scanfcode/">Contribute</a></li>
-              <li><a href="http://scanfcode.com/privacy-policy/">Privacy Policy</a></li>
-              <li><a href="http://scanfcode.com/sitemap/">Sitemap</a></li>
-            </ul>
-          </div>
-        </div> {% endcomment %}
-        <hr>
+      <div class="col-xs-6 col-md-6">
+        <h6>Quick Links</h6>
+          <ul class="footer-links">
+            <li><a href="{% url 'about-us' %}">About Us</a></li>
+            <li><a href="{% url 'aboutus' %} ">Contact Us</a></li>
+            <li><a href="{% url 'aboutus' %} ">Privacy Policy</a></li>
+          </ul>
       </div>
-      <div class="container">
-        <div class="row">
-          <div class="col-md-8 col-sm-6 col-xs-12">
-            <p class="copyright-text" style="text-align:center;">Copyright &copy; 2020 All Rights Reserved by 
-         <a href="#">SLOffers.lk</a>.
-            </p>
-          </div>
+    </div>
+    <hr>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-sm-6 col-xs-12">
+        <p class="copyright-text" style="text-align:center;">Copyright &copy; 2020 All Rights Reserved by
+          <a href="#">SLOffers.lk</a>.
+        </p>
+      </div>
 
-          {% comment %} <div class="col-md-4 col-sm-6 col-xs-12">
-            <ul class="social-icons">
-              <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
-              <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
-              <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
-              <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>   
-            </ul>
-          </div> {% endcomment %}
-        </div>
+      <!-- <div class="col-md-4 col-sm-6 col-xs-12">
+        <ul class="social-icons">
+          <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+          <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+          <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
+          <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
+        </ul>
+      </div> -->
+
+      <div id="social-platforms" style="display:flex; justify-content:center; margin-top:20px; !important">
+
+        <a class="social-icon_" href="#" style="width: 160px;"><i class="fa fa-facebook"></i><span
+            class="tag_">Facebook</span></a>
+        <a class="social-icon_" href="#" style="width: 160px;"><i class="fa fa-instagram"></i><span
+            class="tag_">Instagram</span></a>
+        <a class="social-icon_" href="#" style="width: 160px;"><i class="fa fa-whatsapp"></i><span
+            class="tag_">WhatsApp</span></a>
       </div>
+    </div>
+  </div>
 </footer>
 
 
 
 {% endblock content %}
-
-
-
-

@@ -15,17 +15,23 @@
             document.write('<a href="' + document.referrer + '"><i class="fa fa-arrow-left"></i></a>');
         </script>
 
-      
+
         <div class="product-info">
             <div class="product-text">
-                <h1>Property Name - {{offer_detail.property_name}}</h1>
-                <h2>location - {{offer_detail.area}}</h2>
-                <div class="social-media"> 
-                    <img src={% static 'image/facebook.png' %} style="width: 20px; height: 20px;">{% post_to_facebook request.path "Share via Facebook"%} <br>
-                    <img src={% static 'image/whatsapp.png' %} style="width: 20px; height: 20px;">{% post_to_whatsapp request.path  "Share via Whatsapp" %} <br>
+                <h1>{{offer_detail.property_name}}</h1>
+                <h2>{{offer_detail.area}}</h2>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText_"
+                    aria-controls="navbarText_" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fa fa-share-alt" aria-hidden="true"></i>
+                </button>
+                <div class="social-media collapse navbar-collapse" id="navbarText_">
+                    <img src={% static 'image/facebook.png' %}
+                        style="width: 20px; height: 20px;">{% post_to_facebook request.path "Facebook"%} <br>
+                    <img src={% static 'image/whatsapp.png' %}
+                        style="width: 20px; height: 20px;">{% post_to_whatsapp request.path  "Whatsapp" %} <br>
                     <!-- <i class="fa fa-telegram"></i>{% post_to_telegram "Share via Telegram" offer_detail.slug %} <br> -->
                 </div>
-
+                <hr>
                 <div class="detail">
                     <table>
                         <tr>
@@ -37,20 +43,19 @@
                             <td class="t-info">: &nbsp; {{offer_detail.category}}</td>
                         </tr>
                         <tr>
-                            <td class="t-title"><i class="fa fa-globe"></i>Property Link</td>
+                            <td class="t-title"><i class="fa fa-globe"></i>Link</td>
                             <td class="t-info">: &nbsp; <a href="{{offer_detail.url}}">Click to Visit</a></td>
                         </tr>
                     </table>
                 </div>
-
-                
+                <hr>
 
                 <p class="detail">
-                    <span style="font-weight: bold;">Description</span> <br> 
-                    <p class="detail-d">
-                        {% autoescape off %}{{offer_detail.description}}{% endautoescape %} <br>
-                    </p>
-                    
+                    <span style="font-weight: bold;">Description</span> <br>
+                <p class="detail-d">
+                    {% autoescape off %}{{offer_detail.description}}{% endautoescape %} <br>
+                </p>
+
                 </p>
                 <hr>
 
@@ -72,6 +77,10 @@
 
     </div>
 </div>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+    crossorigin="anonymous"></script>
 
 
 

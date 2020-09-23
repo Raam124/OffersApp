@@ -57,19 +57,19 @@
     
 
     <div class="mypaginator">
-        <ul class="pagination m-0 px-3 py-1">
+        <ul class="pagination mt-2 px-3 py-1">
 
             {% if posts.has_previous %}
-            <li class="page-item"><a class="page-link" href="?page=1">&laquo; first</a></li>
-            <li class="page-item"><a class="page-link" href="?page={{ posts.previous_page_number }}">previous</a></li>
+            <li class="page-item"><a class="page-link" href="?page=1">&laquo;</a></li>
+            <li class="page-item"><a class="page-link" href="?page={{ posts.previous_page_number }}">&lsaquo;</a></li>
             {% endif %}
 
             <li class="page-item"><a class="page-link" href="#"> {{ posts.number }} of
                     {{ posts.paginator.num_pages }}</a></li>
 
             {% if posts.has_next %}
-            <li class="page-item"><a class="page-link" href="?page={{ posts.next_page_number }}">Next</a></li>
-            <li class="page-item"><a class="page-link" href="?page={{ posts.paginator.num_pages }}">last &raquo;</a>
+            <li class="page-item"><a class="page-link" href="?page={{ posts.next_page_number }}">&rsaquo;</a></li>
+            <li class="page-item"><a class="page-link" href="?page={{ posts.paginator.num_pages }}">&raquo;</a>
             </li>
             {% endif %}
         </ul>
@@ -83,11 +83,11 @@
                 <img alt="" class="card-img img-fluid geeks" id="geeks" src="{{post.image_url}}"/>
             </a>
             <div class="card-block" style="background-color: var(--card-color);">
-                <h4 class="card-title">Property Name: &nbsp;{{post.property_name}}</h4>
+                <h4 class="card-title">{{post.property_name}}</h4>
                 <p class="card-text">Location: &nbsp;{{post.area}}</p>
-                <p class="card-text">Property Type: &nbsp;{{post.category}}</p>
+                <p class="card-text">Offer Type: &nbsp;{{post.category}}</p>
                 <p class="card-text copy"> Image Copyrights:&nbsp; {{post.property_name}} </p>
-                <a href="{% url 'offer_detail' post.slug %}" id="v_btn">
+                <a href="{% url 'offer_detail' post.slug %}" id="v_btn" class="btn btn-dark btn-sm">
                     <span class="noselect link1">More details</span>
                     <div id="circle"></div>
                 </a>
@@ -104,16 +104,16 @@
         <ul class="pagination m-0 p-3">
 
             {% if posts.has_previous %}
-            <li class="page-item"><a class="page-link" href="?page=1">&laquo; first</a></li>
-            <li class="page-item"><a class="page-link" href="?page={{ posts.previous_page_number }}">previous</a></li>
+            <li class="page-item"><a class="page-link" href="?page=1">&laquo;</a></li>
+            <li class="page-item"><a class="page-link" href="?page={{ posts.previous_page_number }}">&lsaquo;</a></li>
             {% endif %}
 
             <li class="page-item"><a class="page-link" href="#"> {{ posts.number }} of
                     {{ posts.paginator.num_pages }}</a></li>
 
             {% if posts.has_next %}
-            <li class="page-item"><a class="page-link" href="?page={{ posts.next_page_number }}">Next</a></li>
-            <li class="page-item"><a class="page-link" href="?page={{ posts.paginator.num_pages }}">last &raquo;</a>
+            <li class="page-item"><a class="page-link" href="?page={{ posts.next_page_number }}">&rsaquo;</a></li>
+            <li class="page-item"><a class="page-link" href="?page={{ posts.paginator.num_pages }}">&raquo;</a>
             </li>
             {% endif %}
         </ul>

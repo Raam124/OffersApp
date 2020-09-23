@@ -344,10 +344,7 @@ ul {
 	.modal-content {
 		width: 100%;
 	}
-	.mypaginator {
-		float: none;
-		display: flex;
-	}
+	
 	.card-columns {
 		max-width: 100%;
 	}
@@ -359,6 +356,7 @@ ul {
 	font-size: 20px;
 	line-height: inherit;
 	margin-bottom: 0;
+	text-transform: capitalize;
 }
 
 .card-text {
@@ -366,6 +364,7 @@ ul {
 	font-size: 14px;
 	text-align: center;
 	margin-bottom: 0;
+	text-transform: capitalize;
 }
 
 p {
@@ -390,12 +389,10 @@ p {
 }
 
 #v_btn {
-	background: #222;
-	height: 20px;
+	height: 40px;
 	width: 120px;
-	border: none;
 	border-radius: 10px;
-	color: #eee;
+	/* color: #222; */
 	font-size: 15px;
 	font-family: 'Roboto ', sans-serif;
 	text-align: center;
@@ -410,7 +407,14 @@ p {
 	margin: 15px auto;
 }
 
-#v_btn #circle {
+.navbar-toggler:hover, .navbar-toggler:active, .navbar-toggler{
+	outline: none;
+}
+
+/*#v_btn #circle {
+	
+	border: 2px;
+	border-color: #222;
 	width: 5px;
 	height: 5px;
 	background: transparent;
@@ -429,4 +433,4 @@ p {
 	-moz-user-select: none;
 	-ms-user-select: none;
 	user-select: none;
-}
+} */

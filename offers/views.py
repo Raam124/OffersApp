@@ -46,6 +46,8 @@ def offer_detail(request, slug):
 def aboutus(request):
     return render(request,'offers/aboutus.html')
 
+def about_us(request):
+    return render(request,'offers/about_us.html')
 
 def landing_page(request):
     return render(request,'offers/landing_page.html')
